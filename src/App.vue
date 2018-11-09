@@ -94,12 +94,12 @@
       <div class="container">
         <h1 class="section__title">About US</h1>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <h2 class="section__lead">A few words about who we are</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-5">
+          <div class="col-md-5">
             <p class="font-weight-bold">
               6S•LAMBO is the brainchild of Mátyás Záborszky, who has worked as a 
               marketing and PR expert for over 15 years, consulting in over 20 
@@ -129,15 +129,15 @@
                 Most clients only get to do this once – we’ve done it many times!
             </p>
           </div>
-          <div class="col-sm-5 offset-sm-2">
-            <div class="about-top-img">
+          <div class="col-md-5 offset-md-2 mt-5 mt-md-0">
+            <div class="about-top-img text-right">
               <img src="./assets/img/matyas-nyers.jpg" class="img-fluid" alt="">
             </div>
           </div>
         </div>
 
         <div class="row mt-5">
-          <div class="col-sm-5">
+          <div class="col-md-5">
             <p class="font-weight-bold">
               A former wakeboard world champion and professional athlete, Mate Tokay
               got into the crypto currency business mining Bitcoin. 
@@ -156,8 +156,8 @@
             </p>
 
           </div>
-          <div class="col-sm-5 offset-sm-2">
-            <div class="about-bottom-img">
+          <div class="col-md-5 offset-md-2 mt-5 mt-md-0">
+            <div class="about-bottom-img text-right">
               <img src="./assets/img/mate-tokay.jpg" class="img-fluid" alt="">
             </div>
           </div>
@@ -177,7 +177,7 @@
         <h3 class="h5 text-center mb-5">Our world class experts will guide your great idea to a knockout token sale!</h3>
 
         <div class="row">
-          <div class="col-sm-6 member-col" v-for="({title, description}, index) in members" :key="index">
+          <div class="col-lg-6 member-col" v-for="({title, description}, index) in members" :key="index">
             <article class="member">
               <div class="member__img-wrapper">
                 <img class="member__img" src="./assets/img/member.jpg" alt="">
@@ -439,11 +439,24 @@ body {
 
   position: relative;
   padding-top: 0;
-  background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+  background: #ECECEC;
+
+  @include media-breakpoint-up(md) {
+    background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+  }
+  @include media-breakpoint-up(xl) {
+    background: linear-gradient(to right, #ECECEC, #ECECEC 70%, transparent 70%);
+  }
 
   &:before {
     content: ' ';
+    background: #ECECEC;
+    @include media-breakpoint-up(md) {
     background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+  }
+    @include media-breakpoint-up(xl) {
+      background: linear-gradient(to right, #ECECEC, #ECECEC 70%, transparent 70%);
+    }
     position: absolute;
     top: -8rem;
     height: 8rem;
