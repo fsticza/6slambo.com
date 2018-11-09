@@ -1,25 +1,25 @@
 $danger: #C32B2B;
 $pink: #E43D91;
-$gray: #919191;
+$gray: #999;
 $yellow: #FAB512;
 $semi-light-gray: #c7c7c7;
 $light-gray: #F7F7F7;
-$dark-green: #162126;
+$dark-gray: #131415;
+$text-color: #333;
 
 $section-spacing: 7.75rem;
 
 // bootstrap
 // $font-family-sans-serif: Roboto, sans-serif;
 // $font-family-monospace: "Roboto Mono", Consolas, monospace;
-$body-bg: #131415;
+$body-bg: #1a1a1a;
 $body-color: #fff;
 $primary: #222;
 $light: #fff;
 $dark: #000;
 
 $font-family-base: 'Montserrat', sans-serif;
-$headings-font-family: 'Playfair Display', serif;
-$font-size-base: 0.875rem;
+$headings-font-family: 'Ubuntu', serif;
 $link-color: $yellow;
 $link-hover-color: #fff;
 $link-hover-decoration: none;
@@ -36,7 +36,7 @@ $btn-padding-x: 2rem;
 $btn-border-radius: $btn-padding-y + 1.5rem;
 $btn-font-weight: 600;
 
-$headings-font-weight: 900;
+$headings-font-weight: 700;
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";

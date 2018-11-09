@@ -2,20 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-5 offset-sm-1">
-        <img class="fingerprint" style="left:-160px;top:40px; filter: invert(.5)" src="../assets/img/fingerprint.svg" alt="">
         <h1 class="section__title">Contact</h1>
-        <h2 class="section__lead">Send me a message</h2>
+        <h2 class="section__lead">Send us a message</h2>
 
         <p>
           For more detailed information on how I can help you achieve your goals, let me know how to reach
           you and I will get back to you within two working days.
         </p>
 
-        <follow-me />
       </div>
-      <div class="col-sm-6">
-        <form action="" method="POST"
-        class="needs-validation" @submit.prevent="onContactSubmit" novalidate>
+      <div class="col-sm-5 offset-sm-1">
+        <div id="thanks" @focus="onThxFocus" class="thanks" tabindex="0">
+          Thank you for your interest.
+        </div>
+        <form action="https://formspree.io/ferenc.sticza@gmail.com" method="POST"
+        class="needs-validation" novalidate @submit.prevent="onContactSubmit">
           
           <div class="form-group">
             <label class="form-label" for="name-field">Full name</label>
@@ -62,6 +63,8 @@
             </div>
           </div>
 
+          <input type="hidden" name="_next" value="#thanks" />
+
           <button type="submit" class="btn btn-primary">
             Done
           </button>
@@ -80,22 +83,11 @@ export default {
   methods: {
     onContactSubmit (ev) {
       if(ev.target.checkValidity()) {
-        const data = Array.from(ev.target.elements).reduce((coll, input) => {
-          if(input.name) {
-            coll[input.name] = input.value
-          }
-          return coll
-        }, {})
-        fetch(ev.target.action, {
-          method: ev.target.method,
-          body: JSON.stringify(data)
-        })
-          .then(res => res.text())
-          // .then(console.log)
-          // .catch(console.error)
-        return
+        ev.target.submit()
       }
       ev.target.classList.add('was-validated')
+    },
+    onThxFocus () {
     }
   },
   components: {
@@ -108,13 +100,14 @@ export default {
 @import "../assets/scss/abstracts/variables";
 
 .form-label {
-  color: $gray;
+  color: $text-color;
   text-transform: uppercase;
 }
 
 .form-group {
   .form-control {
     border-bottom-width: 1px;
+    border-bottom-color: $text-color;
     outline: 0 0 1px;
     margin-bottom: 2.25rem;
   }
@@ -129,6 +122,23 @@ export default {
     &:invalid {
       margin-bottom: 0;
     }
+  }
+}
+
+.thanks {
+  height: 1px;
+  overflow: hidden;
+  padding: 10px;
+  outline: 0;
+  opacity: .01;
+  color: #fff;
+  transition: opacity .2s, background .2s;
+
+  &:focus {
+    height: auto;
+    opacity: 1;
+    background: $primary;
+    margin-bottom: 20px;
   }
 }
 

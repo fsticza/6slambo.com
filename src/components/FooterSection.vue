@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-primary text-white">
+  <footer class="footer-section text-white">
       <div class="section">
 
         <div class="container">
@@ -7,8 +7,7 @@
           <h1 class="sr-only">Matyas Zaborszky</h1>
           <div class="row">
             <div class="col-md-8 col-lg-4 mb-4">
-              <img src="../assets/img/logo.svg" style="filter: invert(1)" alt="Matyas Zaborszky" class="mb-4 mt-2 img-fluid">
-              <img class="fingerprint" style="left:30%;top:10px; filter: invert(.5)" src="../assets/img/fingerprint.svg" alt="">
+              <img src="../assets/img/6slambo-logo.svg" height="40" alt="Matyas Zaborszky" class="mb-4 mt-2">
               <follow-me />
             </div>
 
@@ -78,4 +77,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.footer-section {
+  background: #131415;
+}
+</style>
+
 

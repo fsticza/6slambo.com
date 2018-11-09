@@ -1,6 +1,6 @@
 <template>
   <div class="row align-items-center">
-    <div class="col-md-5">
+    <div class="col-md-6">
       <h1 class="section__title">References</h1>
       <transition tag="div" name="carousel-text-fade" mode="out-in">
         <blockquote v-for="(item, index) in items"
@@ -10,10 +10,14 @@
           <p class="h2">
             &ldquo;{{item.text}}&rdquo;
           </p>
-          <footer class="blockquote-footer my-3">
-            <span class="">{{item.name}}</span>
-            <div><em>{{item.role}}</em></div>
-            <a class="float-right inline-link" :href="item.link">&#9656; Visit his/her LinkedIn</a>
+          <footer class="blockquote-footer d-flex my-3">
+            <div class="mr-auto">
+              <strong class="">{{item.name}}</strong>
+              <div><em>{{item.role}}</em></div>
+            </div>
+            <div>
+              <a class="inline-link" :href="item.link">&#9656; Visit his/her LinkedIn</a>
+            </div>
           </footer>
         </blockquote>
       </transition>
@@ -25,14 +29,16 @@
         </li>
       </ol>
     </div>
-    <div class="col-md-5 offset-md-2">
-      <transition tag="div" name="carousel-image-fade" mode="out-in">
-        <img width="480" v-for="(item, index) in items"
-          v-if="activeIndex === index" 
-          class="img-fluid shaded"
-          src="../assets/img/rawpixel-648567-unsplash.jpg"
-          :key="index" />
-      </transition>    
+    <div class="col-md-4 offset-md-2">
+      <div class="img-wrapper">
+        <transition tag="div" name="carousel-image-fade" mode="out-in">
+          <img width="480" v-for="(item, index) in items"
+            v-if="activeIndex === index" 
+            class="img-fluid shaded"
+            src="../assets/img/slide-1.jpg"
+            :key="index" />
+        </transition>    
+      </div>
     </div>
   </div>
 </template>
@@ -90,6 +96,34 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/abstracts/variables";
+
+.blockquote {
+  .blockquote-footer {
+    color: #fff;
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  z-index: 1;
+
+  .shaded {
+    position: relative;
+    z-index: 3;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-top: 20px solid $yellow;
+    border-left: 20px solid $yellow;
+    z-index: 2;
+    width: 60%;
+    height: 25%;
+}
+}
 
 .carousel-text-fade-enter-active {
   transition: all .6s ease-in;
