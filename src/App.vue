@@ -356,6 +356,7 @@ body {
 
 .section--testimonials {
   padding-bottom: 16rem;
+  min-height: 52rem;
 }
 
 .section--dark-gray {
@@ -452,8 +453,8 @@ body {
     content: ' ';
     background: #ECECEC;
     @include media-breakpoint-up(md) {
-    background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
-  }
+      background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+    }
     @include media-breakpoint-up(xl) {
       background: linear-gradient(to right, #ECECEC, #ECECEC 70%, transparent 70%);
     }

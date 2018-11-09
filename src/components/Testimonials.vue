@@ -1,5 +1,5 @@
 <template>
-  <div class="row align-items-center">
+  <div class="row">
     <div class="col-md-6">
       <h1 class="section__title">References</h1>
       <transition tag="div" name="carousel-text-fade" mode="out-in">
