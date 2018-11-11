@@ -1,3 +1,342 @@
 @import "./abstracts/variables";
 @import "./vendors/bootstrap";
 
+a:hover {
+  background: $yellow;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.top-logo {
+  position: relative;
+  z-index: 3;
+}
+.head-deco {
+  z-index: 2;
+  padding-left: 20px;
+  position: relative;
+  padding-top: 60px;
+  margin-top: -45px;
+  margin-bottom: 4rem;
+  background: linear-gradient(to right, transparent, transparent 56%, #1a1a1a 56%);
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    height: 45px;
+    bottom: -20px;
+    right: -20px;
+    border-right: 20px solid $yellow;
+    border-bottom: 20px solid $yellow;
+  }
+
+  .section__subtitle {
+    font-size: 20px;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.video-bg {
+  box-shadow: 20px 20px 0 $yellow;
+}
+
+.about-top-img {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    border-top: 20px solid $yellow;
+    border-right: 20px solid $yellow;
+    width: 20%;
+    height: 40%;
+  }
+}
+
+.about-bottom-img {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    border-bottom: 20px solid $yellow;
+    border-right: 20px solid $yellow;
+    height: 20%;
+    width: 60%;
+  }
+}
+
+.section {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: $section-spacing;
+
+  .fingerprint {
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+.section--team {
+  background: $dark-gray;
+}
+
+.section--testimonials {
+  padding-bottom: 16rem;
+  min-height: 52rem;
+}
+
+.section--dark-gray {
+  position: relative;
+  padding-top: 0;
+  background: linear-gradient(to right, #222, #222 60%, transparent 60%);
+
+  &:before {
+    content: ' ';
+    background: linear-gradient(to right, #222, #222 60%, transparent 60%);
+    position: absolute;
+    top: -8rem;
+    height: 8rem;
+    width: 100%;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 90px;
+    background: $yellow;
+    bottom: 60px;
+    left: 60%;
+  }
+}
+
+.section__title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: $gray;
+  font-family: $font-family-base;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.section__sub-title {
+  font-family: $font-family-base;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  @include media-breakpoint-up(md) {
+    font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.5rem;
+  }
+}
+.section__lead {
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 3.5rem;
+  }
+}
+.section__sub-lead {
+  font-size: 1rem;
+  margin: 2rem 0;
+  @include media-breakpoint-up(md) {
+    font-size: 1.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.5rem;
+  }
+}
+
+.section--gray {
+  background: $light-gray;
+}
+.section--light {
+  color: $text-color;
+
+  position: relative;
+  padding-top: 0;
+  background: #ECECEC;
+
+  @include media-breakpoint-up(md) {
+    background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+  }
+  @include media-breakpoint-up(xl) {
+    background: linear-gradient(to right, #ECECEC, #ECECEC 70%, transparent 70%);
+  }
+
+  &:before {
+    content: ' ';
+    background: #ECECEC;
+    @include media-breakpoint-up(md) {
+      background: linear-gradient(to right, #ECECEC, #ECECEC 80%, transparent 80%);
+    }
+    @include media-breakpoint-up(xl) {
+      background: linear-gradient(to right, #ECECEC, #ECECEC 70%, transparent 70%);
+    }
+    position: absolute;
+    top: -8rem;
+    height: 8rem;
+    width: 100%;
+  }
+}
+.section--yellow {
+  background: $yellow;
+  color: $text-color;
+
+  .section__title {
+    color: $text-color;
+  } 
+}
+
+.inline-link {
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: underline;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: -3px;
+  margin-right: -3px;
+
+  &:hover {
+    color: $text-color;
+  }
+}
+
+.footer-section {
+  .inline-link {
+    text-transform: none;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.copyright {
+  background: $body-bg;
+  padding: 1.5rem 0;
+}
+
+.fade {
+  will-change: opacity;
+}
+
+.nav-link {
+  &:hover {
+    background: transparent;
+  }
+}
+.contact-btn-position {
+  position: relative;
+  top: $section-spacing + $input-btn-padding-y + 0.615rem;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-primary,
+.btn-light {
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $primary;
+    z-index: -1;
+    border-radius: inherit;
+    transform: scale3d(0.6, 0.6, 1);
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    color: $primary;
+
+    &:before {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+  }
+}
+.btn-light {
+  background-color: $yellow;
+
+  &:before {
+    border-color: $yellow;
+  }
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.member {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: #222;
+  font-size: 0.925rem;
+}
+
+.member-col {
+  position: relative;
+
+  &:first-of-type {
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 20%;
+      height: 20px;
+      top: -2px;
+      left: 196px;
+      background: $yellow;
+    }
+  }
+
+  &:last-of-type {
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 20%;
+      height: 20px;
+      top: -2px;
+      right: 18px;
+      background: $yellow;
+    }
+  }
+}
+
+.member__img-wrapper {
+  align-items: center;
+}
+.member__img {
+  width: 180px;
+  height: auto;
+}
+.member__body {
+  padding: 40px;
+}
+
