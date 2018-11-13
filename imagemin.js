@@ -3,7 +3,7 @@ const imageminJpegtran = require("imagemin-jpegtran")
 const imageminPngquant = require("imagemin-pngquant")
 
 (async () => {
-  await imagemin(
+  const files = await imagemin(
     ["./src/assets/img/*.{jpg,png}"],
     "./src/assets/img",
     {
@@ -11,5 +11,5 @@ const imageminPngquant = require("imagemin-pngquant")
     }
   )
   .catch(console.error)
-  .then(console.log)
+  console.log(files)
 })()

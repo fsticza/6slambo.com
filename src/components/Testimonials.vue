@@ -29,7 +29,7 @@
         </li>
       </ol>
     </div>
-    <div class="col-md-4 offset-md-2">
+    <div class="col-md-5 offset-md-1">
       <div class="img-wrapper">
         <transition tag="div" name="carousel-image-fade" mode="out-in">
           <img width="480" v-for="(item, index) in items"

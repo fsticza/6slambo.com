@@ -264,7 +264,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/abstracts/variables";
 .section--head {
-  padding: 7rem 0 15rem;
+  padding: 7rem 0 17rem;
   min-height: 770px;
   background: $dark-gray 50% 50% no-repeat url("../assets/img/head-bg.png");
   background-size: cover;

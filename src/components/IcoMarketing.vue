@@ -31,7 +31,7 @@
       </div>
     </header>
 
-    <section class="section">
+    <section class="section section--odd">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-5">
@@ -48,7 +48,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--even">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-6 img-shade img-shade--left">
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--odd">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-5">
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--even">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-6 img-shade img-shade--left">
@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--odd">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-5">
@@ -116,7 +116,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--even">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-sm-6 img-shade img-shade--left">
@@ -186,6 +186,30 @@ export default {
   min-height: 770px;
   background: $dark-gray 50% 50% no-repeat url("../assets/img/ico-marketing.png");
   background-size: cover;
+
+  .head-deco {
+    &:before {
+      top: 124px;
+    }
+  }
+}
+
+.section--odd {
+  background: linear-gradient(to right, #222, #222 60%, transparent 60%);
+}
+.section--even {
+  background: linear-gradient(to left, #131415, #131415 60%, transparent 60%);
+
+  &:before {
+    content: ' ';
+    height: $section-spacing;
+    width: 40%;
+    position: absolute;
+    top: -$section-spacing;
+    right: 0;
+    z-index: 2;
+    background: #131415;
+  }
 }
 
 .back-link {
@@ -197,12 +221,12 @@ export default {
 .img-shade {
   .img-fluid {
     position: relative;
-    z-index: 3;
+    z-index: 4;
   }
   &:after {
     content: ' ';
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background: $yellow;
     width: 30%;
     bottom: -20px;
