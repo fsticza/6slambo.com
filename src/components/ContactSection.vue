@@ -6,13 +6,13 @@
         <h2 class="section__lead">Send us a message</h2>
 
         <p>
-          For more detailed information on how I can help you achieve your goals, let me know how to reach
-          you and I will get back to you within two working days.
+          For more detailed information on how we can help you achieve your goals, let us know how to reach
+          you and we will get back to you within two working days.
         </p>
 
       </div>
       <div class="col-sm-5 offset-sm-1">
-        <div id="thanks" @focus="onThxFocus" class="thanks" tabindex="0">
+        <div id="thanks" class="thanks" tabindex="0">
           Thank you for your interest.
         </div>
         <form action="https://formspree.io/ferenc.sticza@gmail.com" method="POST"
@@ -86,8 +86,6 @@ export default {
         ev.target.submit()
       }
       ev.target.classList.add('was-validated')
-    },
-    onThxFocus () {
     }
   },
   components: {
