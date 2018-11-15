@@ -7,7 +7,7 @@
           <h1 class="sr-only">Matyas Zaborszky</h1>
           <div class="row">
             <div class="col-md-8 col-lg-4 mb-4">
-              <img src="../assets/img/6slambo-logo.svg" height="40" alt="Matyas Zaborszky" class="mb-4 mt-2">
+              <img src="../assets/img/6slambo-logo.svg" height="40" alt="Matyas Zaborszky" class="mb-4 mt-2 img-fluid">
               <follow-me />
             </div>
 

@@ -4,7 +4,7 @@
       <div class="container">
         <img class="mb-4 top-logo" src="@/assets/img/6slambo-logo.svg" height="44" alt="">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div class="head-deco">
               <h1 class="section__lead">
                 Guaranteed token sale success for ICO founders
@@ -24,7 +24,7 @@
 
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-sm-5">
+            <div class="col-md-5">
               <h1 class="section__title">What we do</h1>
               <h2 class="section__lead">
                 No marketing team? No problem!
@@ -47,7 +47,7 @@
                 see results.
               </p>
             </div>
-            <div class="col-sm-6 offset-sm-1">
+            <div class="col-md-6 offset-md-1">
               <div class="embed-responsive embed-responsive-16by9 video-bg">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
               </div>
@@ -59,10 +59,10 @@
       <div class="section">
         <div class="container">
           <div class="row align-items-end">
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <img src="@/assets/img/image.jpg" alt="" class="img-fluid">
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <div>
                 Our content marketing strategy will tell your audience how awesome 
                 your product or service is, and tell them how they can be part of that
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="row mt-5">
-            <div class="col-sm-6 offset-sm-6">
+            <div class="col-md-6 offset-md-6">
               <a href="#contact" class="btn btn-light">Contact us now</a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-sm-5 offset-sm-1">
+      <div class="col-md-5 offset-md-1">
         <h1 class="section__title">Contact</h1>
         <h2 class="section__lead">Send us a message</h2>
 
@@ -11,7 +11,7 @@
         </p>
 
       </div>
-      <div class="col-sm-5 offset-sm-1">
+      <div class="col-md-5 offset-md-1">
         <div id="thanks" class="thanks" tabindex="0">
           Thank you for your interest.
         </div>
